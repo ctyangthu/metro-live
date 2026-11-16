@@ -457,13 +457,13 @@ main{flex:1;min-height:0;display:grid;grid-template-columns:minmax(0,1fr) minmax
 }
 
 /* ── 捷運 ─────────────────────────────── */
-:root{ --k-tbr:#A8701A; --k-tr:#D4122E; --k-tg:#00804F; --k-to:#E09200; --k-tbl:#0068B7; --k-ny:#BFA000; --k-nlb:#3E9BD6;
+:root{ --k-tbr:#A8701A; --k-tr:#D4122E; --k-tg:#00804F; --k-to:#E09200; --k-tbl:#0068B7; --k-ny:#BFA000; --k-nlb:#3E9BD6; --k-nv:#0E8F9C; --k-na:#5F7183; --k-kc:#2F9450;
   --k-mx:#7A3DB8; --k-mc:#5B5FC7; --k-cg:#6BA513; --k-kr:#D81B6A; --k-ko:#DB8500; }
-@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){ --k-tbr:#D9A24E; --k-tr:#FF5A6E; --k-tg:#3CCB8E; --k-to:#FFC043; --k-tbl:#4FA3F0; --k-ny:#FFE04D; --k-nlb:#8CCBF5;
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){ --k-tbr:#D9A24E; --k-tr:#FF5A6E; --k-tg:#3CCB8E; --k-to:#FFC043; --k-tbl:#4FA3F0; --k-ny:#FFE04D; --k-nlb:#8CCBF5; --k-nv:#4FD0DC; --k-na:#A9B8C6; --k-kc:#6FD08C;
   --k-mx:#B58CF0; --k-mc:#8E93F5; --k-cg:#A6D94C; --k-kr:#F56FA5; --k-ko:#F2A93A; } }
-:root[data-theme="dark"]{ --k-tbr:#D9A24E; --k-tr:#FF5A6E; --k-tg:#3CCB8E; --k-to:#FFC043; --k-tbl:#4FA3F0; --k-ny:#FFE04D; --k-nlb:#8CCBF5;
+:root[data-theme="dark"]{ --k-tbr:#D9A24E; --k-tr:#FF5A6E; --k-tg:#3CCB8E; --k-to:#FFC043; --k-tbl:#4FA3F0; --k-ny:#FFE04D; --k-nlb:#8CCBF5; --k-nv:#4FD0DC; --k-na:#A9B8C6; --k-kc:#6FD08C;
   --k-mx:#B58CF0; --k-mc:#8E93F5; --k-cg:#A6D94C; --k-kr:#F56FA5; --k-ko:#F2A93A; }
-.k-tbr{--k:var(--k-tbr)} .k-tr{--k:var(--k-tr)} .k-tg{--k:var(--k-tg)} .k-to{--k:var(--k-to)} .k-tbl{--k:var(--k-tbl)} .k-ny{--k:var(--k-ny)} .k-nlb{--k:var(--k-nlb)}
+.k-tbr{--k:var(--k-tbr)} .k-tr{--k:var(--k-tr)} .k-tg{--k:var(--k-tg)} .k-to{--k:var(--k-to)} .k-tbl{--k:var(--k-tbl)} .k-ny{--k:var(--k-ny)} .k-nlb{--k:var(--k-nlb)} .k-nv{--k:var(--k-nv)} .k-na{--k:var(--k-na)} .k-kc{--k:var(--k-kc)}
 .k-mx{--k:var(--k-mx)} .k-mc{--k:var(--k-mc)} .k-cg{--k:var(--k-cg)} .k-kr{--k:var(--k-kr)} .k-ko{--k:var(--k-ko)}
 .tno.k-to,.tno.k-ny,.tno.k-nlb,.tno.k-cg,.tno.k-ko{color:#141A18}  /* white on yellow, orange or light green is too faint */
 .mcase{fill:none;stroke:var(--track-casing);stroke-width:5.4;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke}
@@ -508,7 +508,7 @@ main{flex:1;min-height:0;display:grid;grid-template-columns:minmax(0,1fr) minmax
       </svg>
       <div>
         <h1>台灣捷運動態系統</h1>
-        <p>台北 × 新北 × 機場捷運 × 臺中 × 高雄 五大捷運，加上 <b class="h">高鐵</b> × <b>臺鐵</b> 雙鐵</p>
+        <p>台北 × 新北 × 機場捷運 × 臺中 × 高雄 五大捷運與輕軌，加上 <b class="h">高鐵</b> × <b>臺鐵</b> 雙鐵</p>
       </div>
     </div>
     <div class="clock">
@@ -594,7 +594,7 @@ main{flex:1;min-height:0;display:grid;grid-template-columns:minmax(0,1fr) minmax
         <div class="card-head"><h2 id="sumTitle">本日運行概況</h2><small id="sumDate"></small></div>
         <div class="systems">
           <div class="sys m">
-            <div class="sys-h"><b>捷運 五系統</b><small id="mTT"></small></div>
+            <div class="sys-h"><b>捷運・輕軌 五系統</b><small id="mTT"></small></div>
             <div class="sys-n"><b id="mTotal">0</b><span>本日班次</span></div>
             <div class="sys-n"><b id="mRun">0</b><span>目前運行</span></div>
             <div class="sys-n"><b id="mLines">0</b><span>路線</span></div>
@@ -668,7 +668,7 @@ main{flex:1;min-height:0;display:grid;grid-template-columns:minmax(0,1fr) minmax
       </section>
 
       <p class="foot">
-        資料來源：台北捷運、新北捷運（環狀線、三鶯線）、桃園機場捷運、臺中捷運與高雄捷運為交通部 <a href="https://tdx.transportdata.tw/" target="_blank" rel="noopener">TDX 運輸資料流通服務</a>的開放資料：有各站時刻表的路線，本系統據以重建逐班列車；文湖線與臺中捷運綠線只公布班距，班次依班距與站間行車時間推估。台灣高鐵〈2026/2/2 起適用時刻表〉與〈2026 選舉疏運時刻表〉（<a href="https://www.thsrc.com.tw/ArticleContent/a3b630bb-1066-4352-a1ef-58c7b4e8ef7c" target="_blank" rel="noopener">thsrc.com.tw</a>）；臺鐵公司開放資料〈鐵路時刻表 JSON〉（<a href="https://ods.railway.gov.tw/tra-ods-web/ods/download/dataResource/railway_schedule/JSON/list" target="_blank" rel="noopener">ods.railway.gov.tw</a>）。列車位置皆依表定時刻推算，不含誤點、停駛等即時營運資訊；轉乘的步行與等車時間為估計值，未納入國定假日班表、輕軌與貓空纜車。本系統為非官方展示，實際行車以各公司公告為準。
+        資料來源：台北捷運、新北捷運（環狀線、三鶯線、淡海輕軌、安坑輕軌）、桃園機場捷運、臺中捷運與高雄捷運（含高雄環狀輕軌）為交通部 <a href="https://tdx.transportdata.tw/" target="_blank" rel="noopener">TDX 運輸資料流通服務</a>的開放資料：有各站時刻表的路線，本系統據以重建逐班列車；文湖線與臺中捷運綠線只公布班距，班次依班距與站間行車時間推估。台灣高鐵〈2026/2/2 起適用時刻表〉與〈2026 選舉疏運時刻表〉（<a href="https://www.thsrc.com.tw/ArticleContent/a3b630bb-1066-4352-a1ef-58c7b4e8ef7c" target="_blank" rel="noopener">thsrc.com.tw</a>）；臺鐵公司開放資料〈鐵路時刻表 JSON〉（<a href="https://ods.railway.gov.tw/tra-ods-web/ods/download/dataResource/railway_schedule/JSON/list" target="_blank" rel="noopener">ods.railway.gov.tw</a>）。列車位置皆依表定時刻推算，不含誤點、停駛等即時營運資訊；轉乘的步行與等車時間為估計值，未納入國定假日班表與貓空纜車。本系統為非官方展示，實際行車以各公司公告為準。
       </p>
     </aside>
   </main>
@@ -757,6 +757,10 @@ const M_KINDS = {
     fleet:'<b>環狀線</b>（黃線）由新北捷運公司營運，是無人駕駛的中運量系統，自大坪林經中和、板橋、新莊到新北產業園區，串連新店、中和新蘆、板南各線與機場捷運。'},
   nlb:{op:'NTMC', line:'LB', no:'三鶯', name:'三鶯線', sub:'頂埔—鶯桃福德', vmax:70,
     fleet:'<b>三鶯線</b>由新北捷運公司營運，自板南線頂埔站經三峽、台北大學、鶯歌到鶯桃福德。'},
+  nv: {op:'NTDLRT', sys:'NTMC', line:'V', no:'淡海', name:'淡海輕軌', sub:'紅樹林—崁頂・漁人碼頭', vmax:50,
+    fleet:'<b>淡海輕軌</b>由新北捷運公司營運，自淡水信義線紅樹林站出發，經淡江大學、淡海新市鎮到崁頂（綠山線），另一路在濱海沙崙分岔，經台北海洋大學、沙崙到淡水漁人碼頭（藍海線）。'},
+  na: {op:'NTALRT', sys:'NTMC', line:'K', no:'安坑', name:'安坑輕軌', sub:'雙城—十四張', vmax:50,
+    fleet:'<b>安坑輕軌</b>由新北捷運公司營運，自新店安坑的雙城經安康到十四張，在十四張站轉乘環狀線；尖峰另有安康—十四張的區間車。'},
   mx: {op:'TYMC', line:'A', no:'直達', name:'機捷直達車', label:'機場捷運直達車', sub:'台北—機場—環北', vmax:100,
     fleet:'<b>桃園機場捷運直達車</b>（紫色列車）只停靠台北車站、新北產業園區、長庚醫院與機場第一、第二航廈，部分班次延駛至高鐵桃園與環北；台北車站到第一航廈約 36 分鐘，車上設有行李架。'},
   mc: {op:'TYMC', line:'A', no:'普通', name:'機捷普通車', label:'機場捷運普通車', sub:'台北車站—老街溪', vmax:100,
@@ -767,8 +771,10 @@ const M_KINDS = {
     fleet:'<b>高雄捷運紅線</b>自小港經高雄國際機場、高雄車站、左營（高鐵）到岡山車站，全線各站停車。'},
   ko: {op:'KRTC', line:'O', no:'橘線', name:'高捷橘線', label:'高雄捷運橘線', sub:'哈瑪星—大寮', vmax:80,
     fleet:'<b>高雄捷運橘線</b>自哈瑪星經美麗島、鳳山到大寮，在美麗島站與紅線轉乘。'},
+  kc: {op:'KLRT', sys:'KRTC', line:'C', no:'輕軌', name:'高雄環狀輕軌', label:'高雄環狀輕軌', sub:'環狀・籬仔內起訖', vmax:50,
+    fleet:'<b>高雄環狀輕軌</b>全線 38 站、約 22 公里，繞行一圈約 90 分鐘：自籬仔內沿凱旋路、夢時代、高雄展覽館、駁二、哈瑪星、美術館、大順路再回到籬仔內，分順時針與逆時針兩個方向行駛。'},
 };
-for (const [g,k] of Object.entries(M_KINDS)){ k.g=g; k.series=M_SYS.find(s=>s[0]===k.op)[1]; k.label=k.label||k.series+k.name; }
+for (const [g,k] of Object.entries(M_KINDS)){ k.g=g; k.sys=k.sys||k.op; k.series=M_SYS.find(s=>s[0]===k.sys)[1]; k.label=k.label||k.series+k.name; }
 const M_GROUPS = Object.values(M_KINDS).map(k=>[k.g,k.name,k.sub]);
 GROUPS.push(...M_GROUPS);
 const H_N = 12;  // 高鐵 stations; a node number is the 高鐵 station, or H_N + the 臺鐵 station
@@ -943,20 +949,24 @@ const M_SYSOF = Object.fromEntries(M_SYS.map(([op,name,short],i)=>[op,{i,op,name
 // a line has one path per branch (中和新蘆線: to 迴龍 and to 蘆洲); a train runs along one of them
 const ML = MD.lines.map((l,i)=>{
   const paths=l.paths.map(sts=>{ const cum=[0]; sts.forEach((s,k)=>{ if (k){ const p=MS[sts[k-1]]; cum.push(cum[k-1]+Math.hypot(MS[s].x-p.x,MS[s].y-p.y)); } });
-    return {sts,cum,at:new Map(sts.map((s,k)=>[s,k]))}; });
-  const stations=[...new Set(l.paths.flat())], sys=M_SYSOF[l.op], K=Object.values(M_KINDS).find(k=>k.op===l.op&&k.line===l.id&&k.g!=='mx');
+    // a loop (高雄環狀輕軌) lists its first station again at the end; at keeps the first place
+    const at=new Map(); sts.forEach((s,k)=>{ if (!at.has(s)) at.set(s,k); });
+    return {sts,cum,at,loop:sts.length>2&&sts[0]===sts[sts.length-1]}; });
+  const K=Object.values(M_KINDS).find(k=>k.op===l.op&&k.line===l.id&&k.g!=='mx'), stations=[...new Set(l.paths.flat())], sys=M_SYSOF[K.sys];
   stations.forEach((s,k)=>MS[s].k=k);
   const uniq=a=>[...new Set(a)].join('・');
-  return {...l, i, paths, stations, sys, g:K.g, short:sys.short, tag:l.op==='TYMC'?'機捷':K.no, full:/捷運/.test(l.name)?l.name:sys.name+l.name,
-    ends:{f:uniq(paths.map(p=>MS[p.sts[p.sts.length-1]].zh)), b:uniq(paths.map(p=>MS[p.sts[0]].zh))}};
+  return {...l, i, paths, stations, sys, g:K.g, short:sys.short, tag:l.op==='TYMC'?'機捷':K.no, full:/捷運|高雄/.test(l.name)?l.name:sys.name+l.name, ...(e=>paths[0].loop
+      ? {ends:e, dn:{f:'順時針（夢時代→哈瑪星→美術館→科工館）', b:'逆時針（科工館→美術館→哈瑪星→夢時代）'}, span:'環狀'}
+      : {ends:e, dn:{f:'往 '+e.f, b:'往 '+e.b}, span:e.b+'→'+e.f})({f:uniq(paths.map(p=>MS[p.sts[p.sts.length-1]].zh)), b:uniq(paths.map(p=>MS[p.sts[0]].zh))})};
 });
 const M_PRE=1, M_DWELL=0.4, M_POST=2;
 const TRAINS_M = MD.trips.map(([li,kind,dir,pi,p,o,t0,mask],id)=>{
   const L=ML[li], P=L.paths[pi], K=M_KINDS[L.op==='TYMC'&&kind===2?'mx':L.g], off=MD.offsets[o];
-  const stops=MD.patterns[p].map((st,j)=>{ const t=t0+off[j], k=P.at.get(st); return {j,st,k,n:M0+st,tA:t,tD:t,arr:t-M_DWELL,dep:t,s:P.cum[k]}; });
+  // on a loop the shared first-and-last station is the path's start for a clockwise departure and its end for an arrival
+  const stops=MD.patterns[p].map((st,j)=>{ const t=t0+off[j], k=P.loop&&st===P.sts[0] ? ((j===0)===!dir ? 0 : P.sts.length-1) : P.at.get(st); return {j,st,k,n:M0+st,tA:t,tD:t,arr:t-M_DWELL,dep:t,s:P.cum[k]}; });
   const a=stops[0], z=stops[stops.length-1]; a.arr=a.tD-M_PRE; z.arr=z.tA; z.dep=z.tA+M_POST;
   for (let j=0;j<stops.length-1;j++) MS[stops[j].st].dirs.add(dir?'b':'f');
-  return {sys:'M', key:'M'+id, id, no:K.no, kind:K, g:K.g, local:true, line:L, path:P, est:L.est, dir:dir?'b':'f', days:mask, stops, stopAt:new Map(stops.map(s=>[s.st,s])),
+  return {sys:'M', key:'M'+id, id, no:K.no, kind:K, g:K.g, local:true, line:L, path:P, est:L.est, dir:dir?'b':'f', days:mask, stops, stopAt:new Map([...stops].reverse().map(s=>[s.st,s])),
     from:a.st, to:z.st, start:a.arr, end:z.dep, first:a.tD, last:z.tA, nStops:stops.length};
 });
 const M_BYWD = WK.map((_,d)=>TRAINS_M.filter(t=>t.days>>d&1));
@@ -1002,8 +1012,8 @@ const hsrTTLabel = i => { const h=hsrDay(i); return h.tt.regular ? `週${WK[h.wd
 /* ── train helpers shared by the three systems ─────────────────────────────── */
 const stName = (tr,i) => tr.sys==='H' ? HS[i].zh : tr.sys==='M' ? MS[i].zh : ST[i].zh;
 const sysName = tr => tr.sys==='H' ? '高鐵' : tr.sys==='M' ? tr.line.short : '臺鐵';
-const dirTxt = tr => tr.sys==='M' ? '往'+MS[tr.to].zh : DIRNAME[tr.dir];
-const toName = tr => stName(tr,tr.to)+(tr.sys==='T' && tr.to===tr.from?'（環島）':'');
+const dirTxt = tr => tr.sys==='M' ? (tr.path.loop ? tr.line.dn[tr.dir].slice(0,3) : '往'+MS[tr.to].zh) : DIRNAME[tr.dir];
+const toName = tr => stName(tr,tr.to)+(tr.to!==tr.from ? '' : tr.sys==='T' ? '（環島）' : tr.sys==='M' ? `（${tr.line.dn[tr.dir].slice(0,3)}）` : '');
 const kindName = tr => tr.sys==='H' ? '高鐵' : tr.kind.name;
 const subTxt = tr => tr.sys==='H' ? `${DIRNAME[tr.dir]} · ${typeLabel(tr)}` : tr.sys==='M' ? `${tr.kind.name} · 停靠 ${tr.nStops} 站` : `${tr.kind.name} · ${viaTxt(tr)}`;
 function trainState(tr,t){
@@ -1058,7 +1068,7 @@ const link = (a,b,min,how) => { if (!CONN.has(a)) CONN.set(a,[]); if (!CONN.has(
 for (const [h,t,min,how] of LINKS) link('H'+h,'T'+BYNAME.get(t),min,how);
 // interchanges inside one metro network are the stations of different lines that share a name
 // (台北捷運 and 新北捷運 are one network: 板橋, 大坪林, 頂埔 …)
-const NET_OF = {TRTC:'TP', NTMC:'TP', TYMC:'TY', TMRT:'TC', KRTC:'KH'};
+const NET_OF = {TRTC:'TP', NTMC:'TP', NTDLRT:'TP', NTALRT:'TP', TYMC:'TY', TMRT:'TC', KRTC:'KH', KLRT:'KH'};
 const netKey_ = s => NET_OF[ML[s.line].op]+'|'+s.zh;
 const M_SAME = new Map(); MS.forEach(s=>{ const k=netKey_(s); if (!M_SAME.has(k)) M_SAME.set(k,[]); M_SAME.get(k).push(s.i); });
 for (const g of M_SAME.values()) for (let a=0;a<g.length;a++) for (let b=a+1;b<g.length;b++)
@@ -1079,7 +1089,9 @@ const XLINKS = [
   ['H3',M_('TYMC','A','高鐵桃園'),8,'車站相連'],
   ['H6',M_('TMRT','G','高鐵臺中'),8,'車站相連'],[T_('新烏日'),M_('TMRT','G','高鐵臺中'),8,'車站相連'],[T_('大慶'),M_('TMRT','G','大慶'),5,'車站相連'],[T_('松竹'),M_('TMRT','G','松竹'),5,'車站相連'],
   ['H11',M_('KRTC','R','左營'),8,'車站相連'],[T_('新左營'),M_('KRTC','R','左營'),8,'車站相連'],[T_('高雄'),M_('KRTC','R','高雄車站'),6,'站內轉乘'],
-  [T_('橋頭'),M_('KRTC','R','橋頭火車站'),5,'車站相連'],[T_('岡山'),M_('KRTC','R','岡山車站'),5,'車站相連']];
+  [T_('橋頭'),M_('KRTC','R','橋頭火車站'),5,'車站相連'],[T_('岡山'),M_('KRTC','R','岡山車站'),5,'車站相連'],
+  [M_('KLRT','C','前鎮之星'),M_('KRTC','R','凱旋'),5,'站外轉乘'],[M_('KLRT','C','愛河之心'),M_('KRTC','R','凹子底'),5,'站外轉乘'],[M_('KLRT','C','凱旋公園'),M_('KRTC','O','苓雅運動園區'),5,'站外轉乘'],
+  [T_('鼓山'),M_('KLRT','C','鼓山'),4,'車站相連'],[T_('美術館'),M_('KLRT','C','臺鐵美術館'),4,'車站相連'],[T_('科工館'),M_('KLRT','C','科工館'),4,'車站相連']];
 for (const [a,b,min,how] of XLINKS) if (a && b) link(a,b,min,how);
 // a place is what a traveller picks: a metro station (interchange stations of one network are one place),
 // every 高鐵 station and every served 臺鐵 station; 南港・臺北・板橋 are one building for the two railways
@@ -1097,7 +1109,7 @@ const placeLines=[]; { const seen=new Set();
     if (g){ const at=g.ids.findIndex(id=>s.nb.some(n=>PLACE_OF.get('T'+n)===id)); g.ids.splice(at+1,0,placeOf(s.i)); seen.add(s.i); } } }
 const mPlace = s => { const S=MS[s]; if (!PLACE_OF.has('M'+s)){ const ms=M_SAME.get(netKey_(S));
   addPlace({name:ML[S.line].short+S.zh, label:`${ms.map(m=>MS[m].code).join('・')} ${S.zh}`, ms}); } return PLACE_OF.get('M'+s); };
-const mPlaceLines = ML.map(l=>({label:`${l.full}（${l.ends.b}→${l.ends.f}）`, ids:l.stations.map(mPlace)}));
+const mPlaceLines = ML.map(l=>({label:`${l.full}（${l.span}）`, ids:l.stations.map(mPlace)}));
 const optGroup = g => `<optgroup label="${esc(g.label)}">${g.ids.map(id=>`<option value="${id}">${esc(PLACES[id].label)}</option>`).join('')}</optgroup>`;
 const placeOptions = mPlaceLines.map(optGroup).join('')
   + `<optgroup label="高鐵（南港→左營）">${HS.map(h=>{ const p=PLACES[PLACE_OF.get('H'+h.i)]; return `<option value="${p.id}">${esc(p.label)}</option>`; }).join('')}</optgroup>`
@@ -1212,7 +1224,7 @@ const geoBox=(lat0,lat1,lon0,lon1)=>{ const [x0,y1]=proj(lat0,lon0), [x1,y0]=pro
 const REGIONS={ all:()=>geoBox(21.88,mapRect.width<520?25.7:25.32,mapRect.width>=880?119.55:119.95,122.05), hsr:()=>geoBox(22.55,25.15,119.95,121.75),
   north:()=>geoBox(24.55,25.22,120.8,121.98), mid:()=>geoBox(23.4,24.75,120.15,120.98),
   south:()=>geoBox(22.25,23.5,120.05,121.0), east:()=>geoBox(22.6,24.82,120.95,121.98),
-  tpe:()=>geoBox(24.925,25.185,mapRect.width>=880?121.27:121.33,121.65), tyc:()=>geoBox(24.93,25.13,121.17,121.54),
+  tpe:()=>geoBox(24.925,mapRect.width<880?25.3:25.215,mapRect.width>=880?121.27:121.33,121.65), tyc:()=>geoBox(24.93,25.13,121.17,121.54),
   txg:()=>geoBox(24.085,24.215,mapRect.width>=880?120.55:120.59,120.74), khh:()=>geoBox(22.54,22.81,mapRect.width>=880?120.16:120.22,120.44) };
 const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
 let fly=null;
@@ -1435,7 +1447,7 @@ function renderSummary(){
   const mAll=metroDay(i);
   $('mTotal').textContent=mAll.length; $('mTT').textContent=`週${WK[wkOf(i)]}班表`;
   $('mLines').textContent=ML.length; $('mStations').textContent=new Set(MS.map(s=>PLACE_OF.get('M'+s.i))).size;
-  $('mSys').innerHTML=M_SYS.map(([op,name])=>`<span><b>${name}</b>${mAll.filter(t=>t.line.op===op).length} 班 · 運行 <i id="mRun-${op}">0</i></span>`).join('');
+  $('mSys').innerHTML=M_SYS.map(([op,name])=>`<span><b>${name}</b>${mAll.filter(t=>t.line.sys.op===op).length} 班 · 運行 <i id="mRun-${op}">0</i></span>`).join('');
   const list=shown(i); state.dayFirst=list.length?Math.min(...list.map(t=>t.start)):300;
   const {days,nT}=renderWeek(); const curve=renderDayChart();
   // notes: how each railway's timetable changes with the day
@@ -1452,7 +1464,7 @@ function renderSummary(){
   notes.push(`<b>臺鐵</b>全車種依每日公告時刻表（${md(0)}–${md(NDAYS-1)}），本週以週${WK[nT.indexOf(tMax)]}最多（${tMax} 班）、週${WK[nT.indexOf(tMin)]}最少（${tMin} 班）。`);
   if (days.some(d=>proxy(d)!==d)) notes.push(`<span class="w">斜線長條的日期不在臺鐵已公告範圍，暫以最近一個同星期日期的班表推算。</span>`);
   const pk=curve.reduce((a,b)=>b[2]>a[2]?b:a);
-  notes.push(`<b>捷運</b>依交通部 TDX 的各站時刻表重建逐班列車（${MD.updated} 更新），平日與假日班表不同；${ML.filter(l=>l.est).map(l=>l.name).join('、')}只公布班距，班次為依班距推估。`);
+  notes.push(`<b>捷運</b>依交通部 TDX 的各站時刻表重建逐班列車（${MD.updated} 更新），平日與假日班表不同，淡海、安坑與高雄環狀輕軌也在其中；${ML.filter(l=>l.est).map(l=>l.name).join('、')}只公布班距，班次為依班距推估。`);
   const pkM=M_GROUPS.reduce((a,[g])=>a+pk[1][g],0);
   if (pk[2]) notes.push(`依圖例顯示的列車，最多同時有 <b>${pk[2]}</b> 列在線（約 ${fmt(pk[0])}，高鐵 ${pk[1].hsr}、臺鐵 ${pk[2]-pk[1].hsr-pkM}、捷運 ${pkM}）。`);
   $('sumNote').innerHTML=notes.join('<br>');
@@ -1461,7 +1473,7 @@ function renderSummary(){
 /* ── legend filter ─────────────────────────────── */
 const lgRow=([g,name,sub])=>`<button class="row k-${g}" data-k="${g}" aria-pressed="true"><span class="sw"></span><span class="nm">${name.replace('推拉式自強','推拉式<i>自強</i>')}</span><small>${sub}</small><b id="lg-${g}">0</b></button>`;
 $('lgH').innerHTML=lgRow(GROUPS[0]);
-$('lgM').innerHTML=M_SYS.map(([op,name])=>`<div class="lg-sys">${name}</div>`+M_GROUPS.filter(([g])=>M_KINDS[g].op===op).map(lgRow).join('')).join('');
+$('lgM').innerHTML=M_SYS.map(([op,name])=>`<div class="lg-sys">${name}</div>`+M_GROUPS.filter(([g])=>M_KINDS[g].sys===op).map(lgRow).join('')).join('');
 $('lgKinds').innerHTML=TRA_GROUPS.map((g,j)=>(j&&!g[3]&&TRA_GROUPS[j-1][3]?'<div class="lg-sep"></div>':'')+lgRow(g)).join('');
 // the legend folds to swatches and counts; it starts folded when the map is short
 function foldLegend(min){ $('legend').classList.toggle('min',min); $('lgTog').setAttribute('aria-expanded',!min); }
@@ -1497,7 +1509,7 @@ function renderRunning(){
     const row=({tr})=>`<li><button class="runrow k-${tr.g}${state.sel===tr.key?' sel':''}" data-pick="${tr.key}"><span class="tno k-${tr.g}">${tr.no}</span><span class="rm"><b>${stName(tr,tr.from)} → ${toName(tr)}</b><small><span data-ss></span> · ${subTxt(tr)}</small></span><span class="rn"><small data-nl></small><b data-nt></b></span><span class="pg"><i></i></span></button></li>`;
     const hs=list.filter(a=>a.tr.sys==='H'), ts=list.filter(a=>a.tr.sys==='T'), ms=list.filter(a=>a.tr.sys==='M'), n=d=>list.filter(a=>a.tr.dir===d).length;
     if (!list.length) pane.innerHTML=`<div class="empty">此刻沒有${state.show.size?'所選列車':'列車'}運行（${md(state.di)} ${fmt(state.min)}）。<button class="btn" data-jump="480">看 08:00</button></div>`;
-    else pane.innerHTML=(ms.length?`<div class="runhead"><span>捷運 ${ms.length} 列</span><span>${M_SYS.map(([op,,short])=>[short,ms.filter(a=>a.tr.line.op===op).length]).filter(x=>x[1]).map(x=>x.join(' ')).join(' · ')}</span></div><ul class="runlist">${ms.map(row).join('')}</ul>`:'')
+    else pane.innerHTML=(ms.length?`<div class="runhead"><span>捷運 ${ms.length} 列</span><span>${M_SYS.map(([op,,short])=>[short,ms.filter(a=>a.tr.line.sys.op===op).length]).filter(x=>x[1]).map(x=>x.join(' ')).join(' · ')}</span></div><ul class="runlist">${ms.map(row).join('')}</ul>`:'')
       +(hs.length?`<div class="runhead"><span>台灣高鐵 ${hs.length} 列</span><span>南下 ${n('S')} · 北上 ${n('N')}</span></div><ul class="runlist">${hs.map(row).join('')}</ul>`:'')
       +(ts.length?`<div class="runhead"><span>臺鐵 ${ts.length} 列</span><span>順行 ${n('cw')} · 逆行 ${n('ccw')}</span></div><ul class="runlist">${ts.map(row).join('')}</ul>`:'');
     pane.querySelectorAll('.runrow').forEach(b=>runRows.set(b.dataset.pick,{ss:b.querySelector('[data-ss]'),nl:b.querySelector('[data-nl]'),nt:b.querySelector('[data-nt]'),pg:b.querySelector('.pg i')}));
@@ -1524,7 +1536,7 @@ function boardHtml(node){
     if (tt>=s.arr && tt<=s.dep){ note=tr.from===i?'待發':'停靠中'; hot=true; } else if (dt<=5){ note=`${Math.max(1,Math.ceil(dt))} 分後`; hot=true; } else if (dt<60) note=`${Math.ceil(dt)} 分後`; else note='依時刻';
     return `<div class="brow" data-pick="${tr.key}"><span class="bt">${fmt(s.tD)}</span><span class="bn">${tr.no}</span><span class="bd">往 ${toName(tr)}<small>${sys==='H'?typeLabel(tr):sys==='M'?`${tr.kind.name} · 停靠 ${tr.nStops} 站`:`${tr.kind.name} · ${viaTxt(tr)}`}</small></span><span class="bs${hot?' hot':''}">${note}</span></div>`; };
   const dirs = sys==='H' ? [['S','南下 往左營'],['N','北上 往南港']].filter(([d])=>!(d==='S'&&i===11)&&!(d==='N'&&i===0))
-    : sys==='M' ? (L=>[['f','往 '+L.ends.f],['b','往 '+L.ends.b]].filter(([d])=>MS[i].dirs.has(d)))(ML[MS[i].line])
+    : sys==='M' ? (L=>[['f',L.dn.f],['b',L.dn.b]].filter(([d])=>MS[i].dirs.has(d)))(ML[MS[i].line])
     : (h=>[['cw',`順行 · ${h.cw}`],['ccw',`逆行 · ${h.ccw}`]])(dirHint(i));
   const blk=([dir,label])=>{ const l=deps(dir);
     return `<div class="bdir"><h4><span>${label}</span><span>開車 · 車次 · 終點</span></h4>${l.length?l.map(row).join(''):`<div class="bnone">本日${sys==='M'?'此方向':DIRNAME[dir]}班次已無${sys==='T'?'或不停靠本站':''}</div>`}</div>`; };
@@ -1550,7 +1562,7 @@ function selectPlace(id,fromMap){
 }
 
 /* ════════ journey planner: connection scan over the railways and metros, up to three changes ════════ */
-const QUICK=[['北捷淡水','北捷台北101/世貿'],['北捷台北車站','機捷機場第二航廈'],['新北捷鶯歌車站','北捷松山機場'],['中捷北屯總站','北捷市政府'],['高捷高雄國際機場','北捷台北車站'],['花蓮','高捷美麗島']]
+const QUICK=[['北捷淡水','北捷台北101/世貿'],['北捷台北車站','機捷機場第二航廈'],['新北捷鶯歌車站','北捷松山機場'],['中捷北屯總站','北捷市政府'],['北捷台北車站','新北捷淡水漁人碼頭'],['高鐵左營','高捷駁二蓬萊'],['花蓮','高捷美麗島']]
   .filter(q=>q.every(n=>PLACES.some(p=>p.name===n)));
 $('odQuick').innerHTML=QUICK.map(([a,b])=>`<button data-qa="${placeIdByName(a)}" data-qb="${placeIdByName(b)}">${a} → ${b}</button>`).join('');
 $('odQuick').querySelectorAll('button').forEach(b=>b.onclick=()=>{ state.odA=+b.dataset.qa; state.odB=+b.dataset.qb; renderOD(); });
@@ -1676,8 +1688,8 @@ function updateOdStatus(){
 /* ════════ timetables ════════ */
 const segPick=(id,cb)=>$(id).querySelectorAll('button').forEach(b=>b.onclick=()=>{ $(id).querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b)); cb(b.dataset); renderTimetable(); });
 segPick('ttSys',d=>{ state.ttSys=d.s; $('ttBarH').hidden=d.s!=='H'; $('ttBarT').hidden=d.s!=='T'; $('ttBarM').hidden=d.s!=='M'; $('ttQ').hidden=d.s==='M'; });
-$('ttLineM').innerHTML=M_SYS.map(([op,name])=>`<optgroup label="${name}">${ML.filter(l=>l.op===op).map(l=>`<option value="${l.i}">${l.name}</option>`).join('')}</optgroup>`).join('');
-const syncDirM=()=>$('ttDirM').querySelectorAll('button').forEach(b=>b.textContent='往 '+ML[state.ttLineM].ends[b.dataset.d]);
+$('ttLineM').innerHTML=M_SYS.map(([op,name])=>`<optgroup label="${name}">${ML.filter(l=>l.sys.op===op).map(l=>`<option value="${l.i}">${l.name}</option>`).join('')}</optgroup>`).join('');
+const syncDirM=()=>$('ttDirM').querySelectorAll('button').forEach(b=>b.textContent=ML[state.ttLineM].dn[b.dataset.d].slice(0,ML[state.ttLineM].paths[0].loop?3:99));
 $('ttLineM').onchange=e=>{ state.ttLineM=+e.target.value; syncDirM(); renderTimetable(); };
 segPick('ttDirM',d=>state.ttDirM=d.d); syncDirM();
 segPick('ttDirH',d=>state.ttDirH=d.d);
@@ -1706,7 +1718,7 @@ function renderTimetable(){
     t.className='tt';
     t.innerHTML=`<thead><tr><th>車種</th><th>起站 開</th><th>迄站 到</th><th>停站</th><th>行車</th></tr></thead><tbody>`+
       rows.map(tr=>`<tr data-row="${tr.key}" data-pick="${tr.key}"><td><span class="tno k-${tr.g}">${tr.no}</span></td><td><span class="num" style="font-size:16px;font-weight:600">${fmt(tr.first)}</span> <small>${MS[tr.from].zh}</small></td><td><span class="num" style="font-size:16px;font-weight:600">${fmt(tr.last)}</span> <small>${MS[tr.to].zh}</small></td><td><small>${tr.nStops} 站</small></td><td><small>${durTxt(tr.last-tr.first)}</small></td></tr>`).join('')+'</tbody>';
-    $('ttCount').textContent=`${L.full} ${dateLabel(state.di)} 往${L.ends[state.ttDirM]} 共 ${rows.length} 班 · ${L.est?'本線只公布班距，班次依班距推估':'依各站時刻表重建'} · 綠底為運行中`;
+    $('ttCount').textContent=`${L.full} ${dateLabel(state.di)} ${L.dn[state.ttDirM].replace('往 ','往')} 共 ${rows.length} 班 · ${L.est?'本線只公布班距，班次依班距推估':'依各站時刻表重建'} · 綠底為運行中`;
   } else {
     const rows=shown(state.di).filter(tr=>tr.sys==='T'&&(state.ttDirT==='all'||tr.dir===state.ttDirT)&&(state.ttCat==='all'||tr.cat===state.ttCat)&&(!q||tr.no.includes(q))).sort((a,b)=>a.first-b.first);
     t.className='tt';
@@ -1856,7 +1868,7 @@ function renderPanels(){
   for (const [g] of GROUPS) $('lg-'+g).textContent=ALL.reduce((n,a)=>n+(a.tr.g===g),0);
   const nH=ALL.filter(a=>a.tr.sys==='H').length, nM=ALL.filter(a=>a.tr.sys==='M').length;
   $('hRun').textContent=nH; $('tRun').textContent=ALL.length-nH-nM; $('mRun').textContent=nM; $('tabRunN').textContent=ACTIVE.length;
-  for (const [op] of M_SYS){ const e=$('mRun-'+op); if (e) e.textContent=ALL.reduce((n,a)=>n+(a.tr.sys==='M'&&a.tr.line.op===op),0); }
+  for (const [op] of M_SYS){ const e=$('mRun-'+op); if (e) e.textContent=ALL.reduce((n,a)=>n+(a.tr.sys==='M'&&a.tr.line.sys.op===op),0); }
   const off=!ACTIVE.length; $('offhours').hidden=!off;
   if (off){ const list=shown(state.di), first=list.length?Math.min(...list.map(t=>t.first)):0, last=list.length?Math.max(...list.map(t=>t.last)):0;
     $('offTitle').textContent=state.show.size===GROUPS.length?'目前沒有列車運行':'目前沒有所選列車運行';

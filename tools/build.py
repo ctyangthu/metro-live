@@ -11,7 +11,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
 load = lambda p: json.loads(p.read_text(encoding="utf-8"))
 compact = lambda o: json.dumps(o, ensure_ascii=False, separators=(",", ":"))
-DESCRIPTION = ("台灣捷運動態系統：台北捷運、新北捷運、桃園機場捷運、臺中捷運、高雄捷運，加上高鐵與臺鐵，"
+DESCRIPTION = ("台灣捷運動態系統：台北捷運、新北捷運、桃園機場捷運、臺中捷運、高雄捷運與淡海、安坑、高雄環狀輕軌，加上高鐵與臺鐵，"
                "在同一張地圖上依時刻表推算每一班列車的位置，並提供車站看板、轉乘查詢與時刻表。非官方展示。")
 
 
